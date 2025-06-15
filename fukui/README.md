@@ -2,12 +2,9 @@
 
 高専プロコンで作成したスライドをベースに作成したテーマです。
 
-<table>
-  <tr>
-    <td><img src="fukui_example_1.png" alt="example_title_slide" width="300"/></td>
-    <td><img src="fukui_example_2.png" alt="example_slide" width="300"/></td>
-  </tr>
-</table>
+|タイトルスライド|通常スライド|
+|---|---|
+|![タイトルスライド](./fukui_example_1.png)|![通常スライド](./fukui_example_2.png)|
 
 ## タイトルスライド
 
