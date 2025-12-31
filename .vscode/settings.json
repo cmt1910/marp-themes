@@ -1,0 +1,5 @@
+{
+    "markdown.marp.themes": [
+        "./fukui/fukui.css"
+    ]
+}
