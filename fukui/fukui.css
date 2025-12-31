@@ -1,4 +1,7 @@
-/* @theme fukui */
+/*
+@theme fukui
+@auto-scaling true
+*/
 @import 'default';
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;800&display=swap');
 
@@ -9,6 +12,13 @@
     --text-color: #2c2c4c;
     --font-sans: "Noto Sans JP";
     font-size: 32px;
+
+    --h1-font-size: 2.1rem;
+    --h2-font-size: 1.69rem;
+    --h3-font-size: 1.3rem;
+
+    --header-padding: calc(var(--h1-font-size) * 0.625);
+    --header-height: calc(var(--h1-font-size) + (var(--header-padding) * 2));
 }
 
 /* スライド全体 */
@@ -21,10 +31,14 @@ section {
 }
 
 /* 表紙スライド */
+section.lead {
+    padding-top: 0;
+}
+
 section.lead h1 {
     all: unset;
     color: var(--text-color);
-    font-size: 2.1rem;
+    font-size: var(--h1-font-size);
     font-family: var(--font-sans);
     font-weight: 800;
     padding: 0%;
@@ -36,34 +50,42 @@ section.lead h2 {
     color: var(--brand-color);
     font-family: var(--font-sans);
     font-weight: 800;
-    font-size: 1.3rem;
+    font-size: var(--h3-font-size);
 }
 
-/* タイトルスライド／各スライドのヘッダー */
+/* h1 ~ h3 */
 section>h1,
 section>section>h1 {
     background-color: var(--brand-color);
     color: var(--bg-color);
-    font-size: 2.1rem;
+    font-size: var(--h1-font-size);
     font-family: var(--font-sans);
     font-weight: 800;
     width: 100%;
-    padding: calc(2.1rem * 0.625);
+    padding: var(--header-padding);
     position: absolute;
     left: 0%;
     top: 0%;
+    margin-bottom: 0;
 }
 
 section h2 {
     color: var(--brand-color);
     font-family: var(--font-sans);
     font-weight: 800;
-    font-size: 1.69rem;
+    font-size: var(--h2-font-size);
 }
 
 section h3 {
     color: var(--brand-color);
     font-family: var(--font-sans);
     font-weight: 600;
-    font-size: 1.3rem;
+    font-size: var(--h3-font-size);
+}
+
+/* h1ヘッダーがあるスライドだけ本文の前に空白を追加 */
+section:has(> h1)::before {
+    content: "";
+    display: block;
+    height: var(--header-height);
 }
