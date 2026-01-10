@@ -117,11 +117,10 @@ section.content-image-right p:has(> img) {
     justify-content: center;
 
     flex-direction: column;
-    padding: 2%;
-    gap: 1%;
+    padding: 3%;
 }
 
-/* 画像を枠内に収める */
+/* 画像を枠内に収める（デフォルト: 1枚） */
 section.content-image-right p:has(> img)>img {
     flex: 1 1 0;
     min-height: 0;
@@ -135,4 +134,27 @@ section.content-image-right p:has(> img)>img {
 /* Marp既定の装飾を無効化 */
 section.content-image-right p:has(> img)::after {
     display: none;
+}
+
+/* 画像が複数枚ある場合は横並びに表示する */
+
+section p:has(> img:nth-of-type(2)) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+}
+
+section p:has(> img:nth-of-type(2))>img {
+    flex: 1 1 0;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* content-image-right は横並びの上書きを抑止する */
+section.content-image-right p:has(> img:nth-of-type(2)) {
+    flex-direction: column;
 }

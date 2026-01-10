@@ -13,7 +13,7 @@ Marp用のカスタムテーマです。これは表紙のスライドです。
 
 ---
 
-# 見出しH1
+# 通常スライド (見出しH1)
 
 ## 見出しH2
 
@@ -28,6 +28,13 @@ Marp用のカスタムテーマです。これは表紙のスライドです。
 
 ---
 
+# 画像の配置
+
+![画像A](./fukui/example.jpg)
+![画像B](./fukui/example.jpg)
+
+---
+
 <!-- _class: content-image-right -->
 
 # 画像の右側配置
@@ -36,5 +43,5 @@ Marp用のカスタムテーマです。これは表紙のスライドです。
   画像を右側に配置することができます
 - 複数枚の配置に対応しています
 
-![画像A](./fukui/example.jpg)
-![画像B](./fukui/example.jpg)
+![画像C](./fukui/example.jpg)
+![画像D](./fukui/example.jpg)
