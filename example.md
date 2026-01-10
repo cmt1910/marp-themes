@@ -9,7 +9,8 @@ theme: fukui
 
 ## by ちょこみんと
 
-Marp用のカスタムテーマです。これは表紙のスライドです。
+Marp用のカスタムテーマです。テスト用のスライドです。
+これは表紙のスライドです。
 
 ---
 
@@ -30,8 +31,8 @@ Marp用のカスタムテーマです。これは表紙のスライドです。
 
 # 画像の配置
 
-![画像A](./fukui/example.jpg)
-![画像B](./fukui/example.jpg)
+![画像A](./fukui/img/example.jpg)
+![画像B](./fukui/img/example.jpg)
 
 ---
 
@@ -43,5 +44,5 @@ Marp用のカスタムテーマです。これは表紙のスライドです。
   画像を右側に配置することができます
 - 複数枚の配置に対応しています
 
-![画像C](./fukui/example.jpg)
-![画像D](./fukui/example.jpg)
+![画像C](./fukui/img/example.jpg)
+![画像D](./fukui/img/example.jpg)
