@@ -61,12 +61,13 @@ section>section>h1 {
     font-size: var(--h1-font-size);
     font-family: var(--font-sans);
     font-weight: 800;
+    line-height: 1;
     width: 100%;
     padding: var(--header-padding);
     position: absolute;
     left: 0%;
     top: 0%;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 section h2 {
@@ -88,4 +89,50 @@ section:has(> h1)::before {
     content: "";
     display: block;
     height: var(--header-height);
+}
+
+/* content-image-rightで画像を右側に配置する */
+
+/* 画像を absolute 配置するための基準 */
+section.content-image-right {
+    position: relative;
+    padding-right: 50%;
+    /* デフォルト：本文50% */
+}
+
+/* 右側に配置される画像ブロック */
+section.content-image-right p:has(> img) {
+    box-sizing: border-box;
+    position: absolute;
+    top: var(--header-height);
+    /* h1ヘッダー分を避ける */
+    right: 0;
+    height: calc(100% - var(--header-height));
+    width: 50%;
+    /* デフォルト画像幅 */
+    margin: 0;
+
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+
+    flex-direction: column;
+    padding: 2%;
+    gap: 1%;
+}
+
+/* 画像を枠内に収める */
+section.content-image-right p:has(> img)>img {
+    flex: 1 1 0;
+    min-height: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Marp既定の装飾を無効化 */
+section.content-image-right p:has(> img)::after {
+    display: none;
 }
